@@ -131,7 +131,7 @@
         font-weight: 400;
         line-height: 100%;
         color: #FFFFFF;
-        background-color: #FFAB08;
+        background-color: #FF7020;
         transition: all 250ms ease-in-out;
         @media screen and (min-width: 1024px) {
             border-radius: 12px;
@@ -140,7 +140,7 @@
         }
     }
     &__open-delivery-btn:hover {
-        background-color: #FF7020;
+        background-color:   #FFAB08;
         transition: all 250ms ease-in-out;
     }
     &__end {

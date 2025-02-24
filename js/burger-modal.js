@@ -1,4 +1,4 @@
-const burgerOpenModal = document.querySelector('.food__burger-addbtn');
+const burgerOpenModal = document.querySelector('.food__addbtn');
 const burgerModal = document.querySelector('.food__burger-modal-wrapper');
 
 burgerModal.style.cssText = `

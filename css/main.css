@@ -218,6 +218,7 @@ button {
     align-items: center;
     padding: 0 8px;
     gap: 8px;
+    border: 1px solid #FFFFFF;
     background-color: #FFFFFF;
     border-radius: 50px;
     height: 30px;
@@ -228,7 +229,7 @@ button {
         height: 40px; } }
   .categories__menu:hover {
     transition: all 0.3s ease;
-    background-color: #FF7020; }
+    border: 1px solid #F86310; }
   .categories__menu-text {
     color: #000000;
     font-size: 12px;
@@ -239,6 +240,7 @@ button {
         font-size: 16px; } }
 
 .categories__menu.active {
+  border: 1px solid #FFAB08;
   background-color: #FFAB08; }
 
 .basket {
@@ -393,14 +395,14 @@ button {
     font-weight: 400;
     line-height: 100%;
     color: #FFFFFF;
-    background-color: #FFAB08;
+    background-color: #FF7020;
     transition: all 250ms ease-in-out; }
     @media screen and (min-width: 1024px) {
       .basket-modal__open-delivery-btn {
         border-radius: 12px;
         font-size: 16px; } }
   .basket-modal__open-delivery-btn:hover {
-    background-color: #FF7020;
+    background-color: #FFAB08;
     transition: all 250ms ease-in-out; }
   .basket-modal__end {
     padding-top: 8px;
@@ -534,7 +536,8 @@ button {
     @media screen and (min-width: 768px) {
       .delivery-modal__container {
         padding: 20px 16px 29px 16px;
-        border-radius: 24px; } }
+        border-radius: 24px;
+        height: 400px; } }
     @media screen and (min-width: 1024px) {
       .delivery-modal__container {
         padding: 44px 24px 24px 24px;
@@ -567,7 +570,7 @@ button {
         min-width: 300px;
         font-size: 12px; } }
   .delivery-modal__input-name:focus {
-    outline: 1px solid #000;
+    outline: 1px solid #FFAB08;
     color: #000; }
   .delivery-modal__input-tel {
     box-sizing: border-box;
@@ -588,7 +591,7 @@ button {
         min-width: 300px;
         font-size: 12px; } }
   .delivery-modal__input-tel:focus {
-    outline: 1px solid #000;
+    outline: 1px solid #FFAB08;
     color: #000; }
   .delivery-modal__input2-container {
     display: flex;
@@ -616,7 +619,7 @@ button {
       .delivery-modal__input-address {
         font-size: 12px; } }
   .delivery-modal__input-address:focus {
-    outline: 1px solid #000;
+    outline: 1px solid #FFAB08;
     color: #000; }
   .delivery-modal__input-address-num {
     box-sizing: border-box;
@@ -634,20 +637,20 @@ button {
       .delivery-modal__input-address-num {
         font-size: 12px; } }
   .delivery-modal__input-address-num:focus {
-    outline: 1px solid #000;
+    outline: 1px solid #FFAB08;
     color: #000; }
   .delivery-modal__submit-btn {
     cursor: pointer;
     padding: 11px 32px;
     width: 100%;
-    border: 1px solid #FFAB08;
+    border: 1px solid #FF7020;
     border-radius: 8px;
     font-family: Nunito;
     font-size: 12px;
     font-weight: 400;
     line-height: 100%;
     color: #FFFFFF;
-    background-color: #FFAB08;
+    background-color: #FF7020;
     transition: all 250ms ease-in-out; }
     @media screen and (min-width: 768px) {
       .delivery-modal__submit-btn {
@@ -658,7 +661,7 @@ button {
         font-size: 16px;
         border-radius: 12px; } }
   .delivery-modal__submit-btn:hover {
-    background-color: #FF7020;
+    background-color: #FFAB08;
     transition: all 250ms ease-in-out; }
   .delivery-modal__close-btn {
     position: absolute;
@@ -782,57 +785,57 @@ button {
     @media screen and (min-width: 1440px) {
       .food__burger-list {
         margin-top: 36px; } }
-  .food__burger-item {
+  .food__item {
     padding: 4px;
     border-radius: 12px;
     background-color: #FFFFFF; }
     @media screen and (min-width: 1024px) {
-      .food__burger-item {
+      .food__item {
         padding: 12px;
         border-radius: 18px; } }
-  .food__burger-item:nth-child(n+5) {
+  .food__item:nth-child(n+5) {
     display: none; }
     @media screen and (min-width: 768px) {
-      .food__burger-item:nth-child(n+5) {
+      .food__item:nth-child(n+5) {
         display: inline; } }
-  .food__burger-img {
+  .food__img {
     border-radius: 8px; }
     @media screen and (min-width: 1024px) {
-      .food__burger-img {
+      .food__img {
         border-radius: 12px;
         width: 276px;
         height: 220px; } }
-  .food__burger-price {
+  .food__price {
     margin-top: 10px;
     font-size: 16px;
     font-weight: 600;
     line-height: 100%;
     color: #000000; }
     @media screen and (min-width: 1024px) {
-      .food__burger-price {
+      .food__price {
         margin-top: 16px;
         font-size: 24px; } }
-  .food__burger-name {
+  .food__name {
     margin-top: 4px;
     font-size: 12px;
     font-weight: 400;
     line-height: 130%;
     color: #000000; }
     @media screen and (min-width: 1024px) {
-      .food__burger-name {
+      .food__name {
         margin-top: 8px;
         font-size: 16px; } }
-  .food__burger-weight {
+  .food__weight {
     margin-top: 16px;
     font-size: 12px;
     font-weight: 600;
     line-height: 130%;
     color: #B1B1B1; }
     @media screen and (min-width: 1024px) {
-      .food__burger-weight {
+      .food__weight {
         margin-top: 29px;
         font-size: 16px; } }
-  .food__burger-addbtn {
+  .food__addbtn {
     cursor: pointer;
     padding: 11px;
     margin-top: 7px;
@@ -847,13 +850,13 @@ button {
     color: #000000;
     transition: all 250ms ease-in-out; }
     @media screen and (min-width: 1024px) {
-      .food__burger-addbtn {
+      .food__addbtn {
         margin-top: 8px;
         font-size: 16px;
         border-radius: 12px; } }
-  .food__burger-addbtn:hover {
+  .food__addbtn:hover {
     color: #FFFFFF;
-    background-color: #FF7020;
+    background-color: #FFAB08;
     transition: all 250ms ease-in-out; }
   .food__container-snacks {
     margin-top: 30px;
@@ -873,74 +876,6 @@ button {
       .food__snacks-list {
         margin-top: 24px;
         gap: 30px; } }
-  .food__snacks-item {
-    padding: 4px;
-    border-radius: 12px;
-    background-color: #FFFFFF; }
-    @media screen and (min-width: 1024px) {
-      .food__snacks-item {
-        padding: 12px;
-        border-radius: 18px; } }
-  .food__snacks-img {
-    border-radius: 8px; }
-    @media screen and (min-width: 1024px) {
-      .food__snacks-img {
-        border-radius: 12px;
-        width: 276px;
-        height: 220px; } }
-  .food__snacks-price {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 100%;
-    color: #000000; }
-    @media screen and (min-width: 1024px) {
-      .food__snacks-price {
-        margin-top: 16px;
-        font-size: 24px; } }
-  .food__snacks-name {
-    margin-top: 4px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 130%;
-    color: #000000; }
-    @media screen and (min-width: 1024px) {
-      .food__snacks-name {
-        margin-top: 8px;
-        font-size: 16px; } }
-  .food__snacks-weight {
-    margin-top: 16px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 130%;
-    color: #B1B1B1; }
-    @media screen and (min-width: 1024px) {
-      .food__snacks-weight {
-        margin-top: 29px;
-        font-size: 16px; } }
-  .food__snacks-addbtn {
-    cursor: pointer;
-    padding: 11px;
-    margin-top: 7px;
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    background-color: #F2F2F3;
-    font-family: Nunito;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 100%;
-    color: #000000;
-    transition: all 250ms ease-in-out; }
-    @media screen and (min-width: 1024px) {
-      .food__snacks-addbtn {
-        margin-top: 8px;
-        font-size: 16px;
-        border-radius: 12px; } }
-  .food__snacks-addbtn:hover {
-    color: #FFFFFF;
-    background-color: #FF7020;
-    transition: all 250ms ease-in-out; }
   .food__container-hotdog {
     transition: all 0.9s ease;
     margin-top: 30px; }
@@ -959,74 +894,6 @@ button {
       .food__hotdog-list {
         margin-top: 24px;
         gap: 30px; } }
-  .food__hotdog-item {
-    padding: 4px;
-    border-radius: 12px;
-    background-color: #FFFFFF; }
-    @media screen and (min-width: 1024px) {
-      .food__hotdog-item {
-        padding: 12px;
-        border-radius: 18px; } }
-  .food__hotdog-img {
-    border-radius: 8px; }
-    @media screen and (min-width: 1024px) {
-      .food__hotdog-img {
-        border-radius: 12px;
-        width: 276px;
-        height: 220px; } }
-  .food__hotdog-price {
-    margin-top: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 100%;
-    color: #000000; }
-    @media screen and (min-width: 1024px) {
-      .food__hotdog-price {
-        margin-top: 16px;
-        font-size: 24px; } }
-  .food__hotdog-name {
-    margin-top: 4px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 130%;
-    color: #000000; }
-    @media screen and (min-width: 1024px) {
-      .food__hotdog-name {
-        margin-top: 8px;
-        font-size: 16px; } }
-  .food__hotdog-weight {
-    margin-top: 16px;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 130%;
-    color: #B1B1B1; }
-    @media screen and (min-width: 1024px) {
-      .food__hotdog-weight {
-        margin-top: 29px;
-        font-size: 16px; } }
-  .food__hotdog-addbtn {
-    cursor: pointer;
-    padding: 11px;
-    margin-top: 7px;
-    width: 100%;
-    border: none;
-    border-radius: 8px;
-    background-color: #F2F2F3;
-    font-family: Nunito;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 100%;
-    color: #000000;
-    transition: all 250ms ease-in-out; }
-    @media screen and (min-width: 1024px) {
-      .food__hotdog-addbtn {
-        margin-top: 8px;
-        font-size: 16px;
-        border-radius: 12px; } }
-  .food__hotdog-addbtn:hover {
-    color: #FFFFFF;
-    background-color: #FF7020;
-    transition: all 250ms ease-in-out; }
 
 .food__burger-modal-wrapper {
   position: fixed;
@@ -1372,10 +1239,10 @@ button {
   gap: 16px; }
 .footer__networks-icon {
   transition: all 250ms ease-in-out;
-  fill: #FFAB08; }
+  fill: #FF7020; }
 .footer__networks-icon:hover {
   transition: all 250ms ease-in-out;
-  fill: #FF7020; }
+  fill: #FFAB08; }
 .footer__terms {
   margin-top: 24px;
   display: flex;

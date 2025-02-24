@@ -29,6 +29,8 @@
         align-items: center;
         padding: 0 8px;
         gap: 8px;
+        border: 1px solid #FFFFFF;
+
         background-color: #FFFFFF;
         border-radius: 50px;
         height: 30px;  
@@ -40,7 +42,7 @@
     }
     &__menu:hover{
         transition: all 0.3s ease;
-        background-color: #FF7020;
+        border: 1px solid #F86310;
     }
     
     &__menu-text {
@@ -59,5 +61,6 @@
 // }
 
 .categories__menu.active {
+    border: 1px solid #FFAB08;
     background-color: #FFAB08;
 }

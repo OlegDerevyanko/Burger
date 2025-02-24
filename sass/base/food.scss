@@ -51,7 +51,7 @@
             margin-top: 36px;
         }
     }
-    &__burger-item {
+    &__item {
         padding: 4px;
         border-radius: 12px;
         background-color: #FFFFFF;
@@ -60,13 +60,13 @@
             border-radius: 18px;
         }
     }
-    &__burger-item:nth-child(n+5) {
+    &__item:nth-child(n+5) {
         display: none;
         @media screen and (min-width: 768px) {
             display: inline;
         }
     }
-    &__burger-img {
+    &__img {
         border-radius: 8px;
         @media screen and (min-width: 1024px) {            
             border-radius: 12px;
@@ -74,7 +74,7 @@
             height: 220px;
         }
     }
-    &__burger-price {
+    &__price {
         margin-top: 10px;
         font-size: 16px;
         font-weight: 600;
@@ -85,7 +85,7 @@
             font-size: 24px;
             }
     }
-    &__burger-name {
+    &__name {
         margin-top: 4px;
         font-size: 12px;
         font-weight: 400;
@@ -96,7 +96,7 @@
             font-size: 16px;
             }
     }
-    &__burger-weight {
+    &__weight {
         margin-top: 16px;
         font-size: 12px;
         font-weight: 600;
@@ -107,7 +107,7 @@
             font-size: 16px;
             }
     }
-    &__burger-addbtn {
+    &__addbtn {
         cursor: pointer;
         padding: 11px;
         margin-top: 7px;
@@ -127,9 +127,9 @@
             border-radius: 12px;
         }    
     }
-    &__burger-addbtn:hover {
+    &__addbtn:hover {
         color: #FFFFFF;
-        background-color: #FF7020;
+        background-color: #FFAB08;
         transition: all 250ms ease-in-out;
     }
 
@@ -154,81 +154,9 @@
             gap: 30px;
         }
     }
-    &__snacks-item {
-        padding: 4px;
-        border-radius: 12px;
-        background-color: #FFFFFF;
-        @media screen and (min-width: 1024px) {
-            padding: 12px;
-            border-radius: 18px;
-        }
-    }
-    &__snacks-img {
-        border-radius: 8px;
-        @media screen and (min-width: 1024px) {            
-            border-radius: 12px;
-            width: 276px;
-            height: 220px;
-        }
-    }
-    &__snacks-price {
-        margin-top: 10px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 100%;
-        color: #000000;
-        @media screen and (min-width: 1024px) {            
-            margin-top: 16px;
-            font-size: 24px;
-            }
-    }
-    &__snacks-name {
-        margin-top: 4px;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 130%;  
-        color: #000000;
-        @media screen and (min-width: 1024px) {            
-            margin-top: 8px;
-            font-size: 16px;
-            }
-    }
-    &__snacks-weight {
-        margin-top: 16px;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 130%; 
-        color: #B1B1B1; 
-        @media screen and (min-width: 1024px) {            
-            margin-top: 29px;
-            font-size: 16px;
-            }
-    }
-    &__snacks-addbtn {
-        cursor: pointer;
-        padding: 11px;
-        margin-top: 7px;
-        width: 100%;
-        border: none;
-        border-radius: 8px;
-        background-color: #F2F2F3;
-        font-family: Nunito;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 100%;
-        color: #000000;        
-        transition: all 250ms ease-in-out; 
-        @media screen and (min-width: 1024px) {            
-            margin-top: 8px;
-            font-size: 16px;
-            border-radius: 12px;
-        }       
-    }
-    &__snacks-addbtn:hover {
-        color: #FFFFFF;
-        background-color: #FF7020;
-        transition: all 250ms ease-in-out;
-    }
+    
+    
+    
     &__container-hotdog {
         transition: all 0.9s ease;
         margin-top: 30px;
@@ -248,82 +176,7 @@
             margin-top: 24px;
             gap: 30px;
         }
-    }
-    &__hotdog-item {
-        padding: 4px;
-        border-radius: 12px;
-        background-color: #FFFFFF;
-        @media screen and (min-width: 1024px) {
-            padding: 12px;
-            border-radius: 18px;
-        }
-    }
-    &__hotdog-img {
-        border-radius: 8px;
-        @media screen and (min-width: 1024px) {            
-            border-radius: 12px;
-            width: 276px;
-            height: 220px;
-        }
-    }
-    &__hotdog-price {
-        margin-top: 10px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 100%;
-        color: #000000;
-        @media screen and (min-width: 1024px) {            
-            margin-top: 16px;
-            font-size: 24px;
-            }
-    }
-    &__hotdog-name {
-        margin-top: 4px;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 130%;  
-        color: #000000;
-        @media screen and (min-width: 1024px) {            
-            margin-top: 8px;
-            font-size: 16px;
-            }
-    }
-    &__hotdog-weight {
-        margin-top: 16px;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 130%; 
-        color: #B1B1B1; 
-        @media screen and (min-width: 1024px) {            
-            margin-top: 29px;
-            font-size: 16px;
-            }
-    }
-    &__hotdog-addbtn {
-        cursor: pointer;
-        padding: 11px;
-        margin-top: 7px;
-        width: 100%;
-        border: none;
-        border-radius: 8px;
-        background-color: #F2F2F3;
-        font-family: Nunito;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 100%;
-        color: #000000;        
-        transition: all 250ms ease-in-out;
-        @media screen and (min-width: 1024px) {            
-            margin-top: 8px;
-            font-size: 16px;
-            border-radius: 12px;
-        }        
-    }
-    &__hotdog-addbtn:hover {
-        color: #FFFFFF;
-        background-color: #FF7020;
-        transition: all 250ms ease-in-out;
-    }
+    }     
 }
 
 
