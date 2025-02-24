@@ -26,9 +26,12 @@ const closeModal = event => {
 }
 
 const openModal = () => {
-    modalElem.style.visibility = 'visible';
-    modalElem.style.opacity = 1;    
-    window.addEventListener('keydown', closeModal)
+    // Проверяем ширину экрана перед открытием модального окна
+    if (window.innerWidth < 1024) {
+        modalElem.style.visibility = 'visible';
+        modalElem.style.opacity = 1;    
+        window.addEventListener('keydown', closeModal);
+    }
 };
 
 buttonElem.addEventListener('click', openModal);

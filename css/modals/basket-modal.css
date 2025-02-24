@@ -1,0 +1,125 @@
+.basket-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 280px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  margin: auto;
+  padding: 16px 10px;
+  background: #FFFFFF;
+  border-radius: 12px; }
+  .basket-modal__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px; }
+  .basket-modal__name {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 100%; }
+  .basket-modal__title-total {
+    padding: 1px 13px;
+    border-radius: 6px;
+    background: #F2F2F3;
+    color: #000000;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px; }
+  .basket-modal__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 13px;
+    padding-bottom: 19px; }
+  .basket-modal__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f2f2f3;
+    border-top: 1px solid #f2f2f3; }
+  .basket-modal__burger-preview {
+    display: flex;
+    gap: 6px; }
+  .basket-modal__burger-img {
+    border-radius: 8px; }
+  .basket-modal__burger-name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000; }
+  .basket-modal__burger-weight {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin-top: 1px;
+    margin-bottom: 6px; }
+  .basket-modal__burger-cost {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000; }
+  .basket-modal__total-text {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+    color: #000000; }
+  .basket-modal__open-delivery-btn {
+    cursor: pointer;
+    padding: 11px 32px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    background-color: #FF7020;
+    font-family: Nunito;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 100%;
+    color: #FFFFFF; }
+  .basket-modal__end {
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .basket-modal__end-container {
+    display: flex;
+    align-items: center;
+    gap: 8px; }
+  .basket-modal__end-text {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #000000; }
+  .basket-modal__end-close {
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #B1B1B1; }
+  .basket-modal__end-close:hover {
+    color: #000000; }
+
+.quantity-controls-basket {
+  display: flex;
+  gap: 18px;
+  padding: 7px 8px;
+  border-radius: 8px;
+  background-color: #F2F2F3; }
+
+.quantity-controls-basket__btn {
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 16px;
+  border: none;
+  color: #000000; }
+
+.quantity-controls__quantity-basket {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #000000; }
+
+/*# sourceMappingURL=basket-modal.css.map */

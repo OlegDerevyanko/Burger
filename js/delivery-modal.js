@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const deliveryModalWrapper = document.querySelector('.delivery-modal-wrapper');
     const deliveryModal = document.querySelector('.delivery-modal');
     const pickupInput = document.getElementById('pickup');
     const deliveryInput = document.getElementById('delivery');
@@ -6,40 +7,32 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = deliveryModal.querySelector('form'); 
     const buttonDelivery = document.querySelector('.basket-modal__open-delivery-btn');
 
+    // Функция для закрытия модального окна
+    const closeDelivery = event => {
+        const target = event.target;
 
-    deliveryModal.style.cssText = `
-    display: flex;
-    flex-direction: column;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 250ms ease-in-out;
-`;
+        if (target === deliveryModalWrapper ||        
+            target.closest('.delivery-modal__close-btn') ||
+            event.code === 'Escape') {
+            deliveryModalWrapper.style.opacity = 0;  
 
-const closeDelivery = event => {
-    const target = event.target;
+            setTimeout(() => {
+                deliveryModalWrapper.style.visibility = 'hidden'; 
+            }, 250);
 
-    if (target === deliveryModal ||        
-        target.closest('.delivery-modal__close-btn') ||
-        event.code === 'Escape') {
-            deliveryModal.style.opacity = 0;  
-
-        setTimeout(() => {
-            deliveryModal.style.visibility = 'hidden'; 
-        }, 250);
-
-        window.removeEventListener('keydown', closeDelivery);
+            window.removeEventListener('keydown', closeDelivery);
+        }
     }
-}
 
-const openDelivery = () => {
-    deliveryModal.style.visibility = 'visible';
-    deliveryModal.style.opacity = 1;
-    window.addEventListener('keydown', closeDelivery)
-};
+    // Функция для открытия модального окна
+    const openDelivery = () => {
+        deliveryModalWrapper.style.visibility = 'visible';
+        deliveryModalWrapper.style.opacity = 1;
+        window.addEventListener('keydown', closeDelivery)
+    };
 
-buttonDelivery.addEventListener('click', openDelivery);
-deliveryModal.addEventListener('click', closeDelivery);
-
+    buttonDelivery.addEventListener('click', openDelivery);
+    deliveryModalWrapper.addEventListener('click', closeDelivery);
 
     // Функция для переключения видимости блока адреса доставки
     function toggleDeliveryAddressVisibility() {
@@ -68,8 +61,8 @@ deliveryModal.addEventListener('click', closeDelivery);
             deliveryType: deliveryModal.querySelector('input[name="delivery"]:checked').value,
             address: deliveryInput.checked ? {
                 street: deliveryModal.querySelector('.delivery-modal__input-address[placeholder="Вулиця"]').value,
-                house: deliveryModal.querySelector('.delivery-modal__input-address[placeholder="№ Будинку"]').value,
-                apartment: deliveryModal.querySelector('.delivery-modal__input-address[placeholder="Квартира"]').value
+                house: deliveryModal.querySelector('.delivery-modal__input-address-num[placeholder="№ Будинку"]').value,
+                apartment: deliveryModal.querySelector('.delivery-modal__input-address-num[placeholder="Квартира"]').value
             } : null
         };
 

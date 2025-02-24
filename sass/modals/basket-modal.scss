@@ -3,18 +3,33 @@
     top: 0;
     left: 0;
     z-index: 11;
-    width: 280px;
+    width: 300px;
+    box-sizing: border-box;
+
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
     margin: auto;
     padding: 16px 10px;
     background: #FFFFFF;
     border-radius: 12px;
+    @media screen and (min-width: 1024px) {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative;
+        box-shadow: none;
+        border-radius: 18px;
+        padding: 24px 16px;
+        border: none;
+    }
 
     &__title {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-bottom: 8px;
+        @media screen and (min-width: 1024px) {
+            padding-bottom: 12px;
+        }
     }
 
     &__name {
@@ -22,6 +37,9 @@
         font-size: 16px;
         font-weight: 600;
         line-height: 100%;
+        @media screen and (min-width: 1024px) {
+            font-size: 24px;
+        }
     }   
     &__title-total {
         padding: 1px 13px;
@@ -31,6 +49,11 @@
         font-size: 10px;
         font-weight: 400;
         line-height: 14px;
+        @media screen and (min-width: 1024px) {
+            padding: 2px 16px;
+
+            font-size: 12px;
+        }
     } 
     
     &__total {
@@ -39,6 +62,11 @@
         align-items: center;
         padding-top: 13px;
         padding-bottom: 19px;
+        @media screen and (min-width: 1024px) {
+            padding-top: 16px;
+            padding-bottom: 24px;
+    
+        }
     }
 
     &__item {
@@ -48,6 +76,9 @@
         padding: 12px 0;
         border-bottom: 1px solid rgb(242, 242, 243);
         border-top: 1px solid rgb(242, 242, 243);
+        @media screen and (min-width: 1024px) {
+            padding: 15px 0;
+        }
     }
     &__burger-preview {
         display: flex;
@@ -75,6 +106,9 @@
         font-weight: 400;
         line-height: 16px;
         color: #000000;
+        @media screen and (min-width: 1024px) {
+            font-size: 16px;
+        }
     }
     
     &__total-text {
@@ -82,6 +116,9 @@
         font-weight: 400;
         line-height: 130%;
         color: #000000;
+        @media screen and (min-width: 1024px) {
+            font-size: 16px;
+        }
     }
     &__open-delivery-btn {
         cursor: pointer;
@@ -89,18 +126,31 @@
         width: 100%;
         border: none;
         border-radius: 8px;
-        background-color: #FF7020;
         font-family: Nunito;
         font-size: 12px;
         font-weight: 400;
         line-height: 100%;
         color: #FFFFFF;
+        background-color: #FFAB08;
+        transition: all 250ms ease-in-out;
+        @media screen and (min-width: 1024px) {
+            border-radius: 12px;
+            font-size: 16px;
+
+        }
+    }
+    &__open-delivery-btn:hover {
+        background-color: #FF7020;
+        transition: all 250ms ease-in-out;
     }
     &__end {
         padding-top: 8px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (min-width: 1024px) {
+            padding-top: 12px;
+        }
     }
     &__end-container {
         display: flex;
@@ -112,6 +162,9 @@
         font-weight: 400;
         line-height: 14px;
         color: #000000;
+        @media screen and (min-width: 1024px) {
+            font-size: 12px;
+        }
     }
     &__end-close {
         cursor: pointer;
@@ -119,29 +172,52 @@
         font-weight: 400;
         line-height: 14px;
         color: #B1B1B1;
+        @media screen and (min-width: 1024px) {
+            display: none;
+        }
     }
     &__end-close:hover {
         color: #000000;
     }
 }
 
-.quantity-controls {
+.quantity-controls-basket {
     display: flex;
-    gap: 18px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+
+    background-color: #F2F2F3;
+    @media screen and (min-width: 1024px) {
+        border-radius: 12px;
+
+    }
+}
+.quantity-controls-basket__btn {
+    cursor: pointer;
     padding: 7px 8px;
     border-radius: 8px;
-    background-color: #F2F2F3;
-}
-.quantity-controls__btn {
+
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     border: none;
+
     color: #000000;
+    @media screen and (min-width: 1024px) {
+        padding: 9px 12px;
+
+        font-size: 16px;
+        border-radius: 12px;
+
+    }
 }
-.quantity-controls__quantity {
+.quantity-controls-basket__quantity {
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
     color: #000000;
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+    }
 }

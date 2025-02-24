@@ -1,5 +1,5 @@
 const burgerOpenModal = document.querySelector('.food__burger-addbtn');
-const burgerModal = document.querySelector('.food__burger-modal');
+const burgerModal = document.querySelector('.food__burger-modal-wrapper');
 
 burgerModal.style.cssText = `
     display: flex;
@@ -27,7 +27,8 @@ const closeBurgerModal = event => {
 
 const openBurgerModal = () => {
     burgerModal.style.visibility = 'visible';
-    burgerModal.style.opacity = 1;    
+    burgerModal.style.opacity = 1;
+        
     window.addEventListener('keydown', closeBurgerModal)
 };
 

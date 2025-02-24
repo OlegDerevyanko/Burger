@@ -1,13 +1,40 @@
-.food__burger-modal {
-    position: absolute; 
-    width: 320px;
-    z-index: 1000;    
+.food__burger-modal-wrapper {
+    position: fixed; /* Используем fixed вместо absolute */
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+
+.food__burger-modal {
+    position: relative; /* Убираем absolute */
+    width: 320px;
     background-color: #FFFFFF;    
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Тень для модального окна */
+    @media screen and (min-width: 768px) {
+        width: 524px;
+        border-radius: 24px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 684px;
+    }
 }
 .food__burger-modal-container {
     padding: 32px 10px;
+    @media screen and (min-width: 768px) {
+        padding: 16px 16px 24px 16px;
+    } 
+    @media screen and (min-width: 1024px) {
+        padding: 24px 24px 36px 24px;
+    }
 }
 .food__burger-modal-title {
     font-size: 28px;
@@ -15,9 +42,38 @@
     line-height: 120%;
     color: #000000;
     margin-bottom: 12px;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 16px;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 40px;
+        margin-bottom: 24px;
+    }
+}
+.food__burger-modal-card {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        gap: 8px;
+    } 
+    @media screen and (min-width: 1024px) {
+        gap: 16px;
+    }
 }
 .food__burger-modal-img {
     border-radius: 16px;
+    @media screen and (min-width: 768px) {
+        width: 226px;
+        height: 180px;
+    } 
+    @media screen and (min-width: 1024px) {
+        width: 276px;
+        height: 220px;
+    }
+}
+.food__burger-modal-card-info {
+    @media screen and (min-width: 768px) {
+
+    } 
 }
 .food__burger-modal-description {
     font-size: 12px;
@@ -25,18 +81,27 @@
     line-height: 130%;
     color: #000000;
     margin-top: 16px;
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+    } 
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+    }
 }
 .food__burger-modal-ingredients {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 4px;   
 }
 .food__burger-modal-ingredients-title {
     font-size: 10px;
     font-weight: 600;
     line-height: 130%;
     color: #000000;
+    @media screen and (min-width: 1024px) {
+        font-size: 12px;
+    }
 }
 .food__burger-modal-ingredients-list {
     display: flex;
@@ -48,17 +113,37 @@
     font-weight: 400;
     line-height: 130%;
     color: #000000;
+    @media screen and (min-width: 1024px) {
+        font-size: 12px;
+    }
 }
 .food__burger-modal-ingredients-weight {
     font-size: 10px;
     font-weight: 400;
     line-height: 130%;
     color: #B1B1B1;
+    @media screen and (min-width: 1024px) {
+        font-size: 12px;
+    }
+}
+.food__burger-modal-footer {
+    margin-top: 98px;
+    @media screen and (min-width: 768px) {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    @media screen and (min-width: 1024px) {
+        margin-top: 40px;
+    }
 }
 .food__burger-modal-btns {
-    margin-top: 98px;
     display: flex;
     gap: 8px;
+    @media screen and (min-width: 1024px) {
+        gap: 16px;
+    }
 }
 .food__burger-modal-addbtn {
     cursor: pointer;
@@ -66,18 +151,24 @@
     width: 100%;
     border: none;
     border-radius: 8px;
-    background-color: #F2F2F3;
     font-family: Nunito;
     font-size: 12px;
     font-weight: 400;
     line-height: 100%;
-    color: #000000;
-    
+    color: #FFFFFF;
+    background-color: #FFAB08;
     transition: all 250ms ease-in-out;
+    @media screen and (min-width: 768px) {
+        min-width: 218px;
+    }
+    @media screen and (min-width: 1024px) {
+        min-width: 276px;
+        border-radius: 12px;
+        font-size: 16px;
+    }
 
 }
 .food__burger-modal-addbtn:hover {
-    color: #FFFFFF;
     background-color: #FF7020;
     transition: all 250ms ease-in-out;
 }
@@ -89,6 +180,13 @@
     font-weight: 600;
     line-height: 130%;
     color: #000000;
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+        text-align: center;
+    }
+    @media screen and (min-width: 1024px) {       
+        font-size: 24px;
+    }
 }
 .food__burger-modal-close-btn {
     position: absolute;
@@ -96,6 +194,10 @@
     right: 10px;
     width: 24px;
     height: 24px;
+    @media screen and (min-width: 1024px) {
+        top: 24px;
+        right: 24px;
+        }
 }
 .food__burger-modal-close-icon {
     cursor: pointer;
@@ -106,4 +208,41 @@
 .food__burger-modal-close-icon:hover  {
     -webkit-transform: rotate(180deg);
         transform: rotate(180deg);
+}
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: #F2F2F3;
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+        border-radius: 12px;
+
+    }
+}
+.quantity-controls__btn {
+    cursor: pointer;
+    padding: 7px 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    border: none;
+    color: #000000;
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+        border-radius: 12px;
+        padding: 9px 12px;
+
+    }
+}
+.quantity-controls__quantity {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    color: #000000;
+    @media screen and (min-width: 1024px) {
+        font-size: 16px;
+    }
 }

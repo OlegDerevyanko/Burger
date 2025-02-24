@@ -4,13 +4,35 @@ body {
     letter-spacing: 0%;
     transition: all 0.3s ease;
 }
+header {
+    width: 320px;
+    margin: auto;
+    @media screen and (min-width: 768px) {
+        width: 768px;        
+    }
+    @media screen and (min-width: 1024px) {
+        width: 1024px;        
+    }
+}
 main {
     width: 320px;
-    margin: auto
+    margin: auto;
+    @media screen and (min-width: 768px) {
+        width: 768px;        
+    }
+    @media screen and (min-width: 1024px) {
+        width: 1024px;        
+    }
 }
 footer {
     width: 320px;
     margin: auto;
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 1024px;        
+    }
 }
 p {
     margin: 0;
@@ -35,6 +57,9 @@ ul {
 }
 button {
     padding: 0;
+}
+.hidden {
+    display: none;
 }
 /* .body-darken {
     filter: blur(2px);

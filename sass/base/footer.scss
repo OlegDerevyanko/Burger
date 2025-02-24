@@ -1,47 +1,115 @@
+
+.logo-footer-name {
+    @media screen and (min-width: 1024px) {
+        width: 229px;
+        height: 37px;        
+    }
+}
+.logo-footer {
+    @media screen and (min-width: 1024px) {
+        width: 67px;
+        height: 67px;        }
+}
 .footer {
+    @media screen and (min-width: 768px) {
+
+    }
 
     &__container {    
         padding: 22px 0 26px 10px;
+        @media screen and (min-width: 768px) {
+            padding: 38px 0 26px 64px;
+        }
+        @media screen and (min-width: 1024px) {
+            padding: 48px 32px 40px 32px;
+        }
+    }
+    &__container-box {
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: space-between;
+        }        
     }
     &__logo {
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 10px;        
+    }
+    &__logo-icon {
+        fill: #FFAB08;
+    }
+    &__contact-box {
+        @media screen and (min-width: 768px) {
+            display: flex;
+            gap: 177px;  
+            margin-top: 33px;     
+        }
+        @media screen and (min-width: 1024px) {
+            margin-top: 0;
+            gap: 50px;  
+        }  
     }
     &__contact {
         margin-top: 22px;
         display: flex;
         flex-direction: column;
         gap: 8px;
+        @media screen and (min-width: 768px) {
+            margin-top: 0; 
+        }
+        @media screen and (min-width: 1024px) {
+            gap: 25px;
+        } 
     }
     &__contact-text {
         color: #000000;
         font-size: 18px;
         font-weight: 400;
         line-height: 100%;
+        @media screen and (min-width: 1024px) {
+            font-size: 24px;
+        } 
     }
     &__contact-call {
         display: flex;
         align-items: center;
         gap: 4px;
     }
+    &__contact-icon {
+        @media screen and (min-width: 1024px) {
+            width: 24px;
+            height: 24px;
+        } 
+    }
     &__contact-link {
         color: #000000;
         font-size: 12px;
         font-weight: 400;
         line-height: 130%;
+        @media screen and (min-width: 1024px) {
+            font-size: 16px;
+        }
     }
     &__networks {
         margin-top: 24px;
         display: flex;
         flex-direction: column;
         gap: 8px;
+        @media screen and (min-width: 768px) {
+            margin-top: 0;
+        }
+        @media screen and (min-width: 1024px) {
+            gap: 22px;
+        } 
     }
     &__networks-text {
         color: #000000;
         font-size: 18px;
         font-weight: 400;
         line-height: 100%;
+        @media screen and (min-width: 1024px) {
+            font-size: 24px;
+        } 
     }
     &__networks-links-container {
         display: flex;
@@ -49,18 +117,30 @@
         gap: 16px;
     }
     &__networks-icon {
-        fill: #FF5C00;
+        transition: all 250ms ease-in-out;
+        fill: #FFAB08;
+    }
+    &__networks-icon:hover {
+        transition: all 250ms ease-in-out;
+        fill: #FF7020;
     }
     &__terms {
         margin-top: 24px;
         display: flex;
         flex-direction: column;
         gap: 4px;
+        @media screen and (min-width: 768px) {
+            margin-top: 40px; 
+        }
+        @media screen and (min-width: 1024px) {
+            margin-top: 35px; 
+        } 
     }
     &__terms-text {
         color: #000000;
         font-size: 12px;
         font-weight: 400;
         line-height: 16px;
+        
     }
 }

@@ -1,33 +1,85 @@
-.delivery-modal {    
-    position: absolute; 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Затемнение фона */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Убедитесь, что модальное окно поверх других элементов */
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms ease-in-out;
+}
+.form {
+    width: 300px;
+}
+.delivery-modal {
+    position: relative;
     width: 320px;
     height: 704px;
-    left: -10px;   
-    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1001; /* Модальное окно поверх затемнения */
+    @media screen and (min-width: 768px) {
+        width: 524px;
+        height: auto;
+    }
+    @media screen and (min-width: 1024px) {
+        display: flex;
+        width: 684px;
+        height: auto;
+    }
+    &__img-container {
+        display: none;
+        @media screen and (min-width: 1024px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 65px 20px;
+            background-color: #FFAB08;
+            border-radius: 24px 0 0 24px;
+        }
+    }
+    &__img-box {
+        @media screen and (min-width: 1024px) {
+            padding: 22px 52px;
+            }
+    }
+    &__img {
+        @media screen and (min-width: 1024px) {
+            width: 197px;
+            height: 257px;
+            }
+    }
+    &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 32px 10px;
+    background-color: #FFFFFF;
+    @media screen and (min-width: 768px) {
+        padding: 20px 16px 29px 16px;
+        border-radius: 24px;
+    }
+    @media screen and (min-width: 1024px) {
+        padding: 44px 24px 24px 24px;
 
-    &__container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        padding: 32px 10px;
-        background-color: #FFFFFF;
-    }
-    &__container {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-        padding: 32px 10px;
-        background-color: #FFFFFF;
-    }
+        border-radius: 0 24px 24px 0;
+        height: auto;
+        }
+    }    
     &__title {
         font-size: 16px;
         font-weight: 600;
         line-height: 100%;
         color: #000000;
+        @media screen and (min-width: 1024px) {
+            font-size: 24px;
+        }
     }
     &__input-name { 
         box-sizing: border-box;   
@@ -42,6 +94,12 @@
         line-height: 130%;
         background-color: #FFFFFF;
         color: #B1B1B1;
+        @media screen and (min-width: 768px) {
+            width: auto;
+            min-width: 300px;
+            font-size: 12px;
+
+        }
     }
     &__input-name:focus {
         outline: 1px solid #000;
@@ -61,6 +119,12 @@
         line-height: 130%;
         background-color: #FFFFFF;
         color: #B1B1B1;
+        @media screen and (min-width: 768px) {
+            width: auto;
+            min-width: 300px;
+            font-size: 12px;
+
+        }
     }
     &__input-tel:focus {
         outline: 1px solid #000;
@@ -68,14 +132,20 @@
     }
     &__input2-container {
         display: flex;
-        gap: 10px;
+        gap: 8px;
         margin-top: 8px;
+        @media screen and (min-width: 768px) {
+            margin-bottom: 24px;       
+        }
+        @media screen and (min-width: 1024px) {
+            margin-bottom: 32px;       
+
+        }
     }
     &__input-address { 
         box-sizing: border-box;   
         padding: 12px;
-        width: 100%;
-        
+        min-width: 300px;        
         border: 1px solid rgb(242, 242, 243);
         border-radius: 8px;
         font-family: Nunito;
@@ -84,8 +154,31 @@
         line-height: 130%;
         background-color: #FFFFFF;
         color: #B1B1B1;
+        @media screen and (min-width: 1024px) {
+            font-size: 12px;
+        }
     }
     &__input-address:focus {
+        outline: 1px solid #000;
+        color: #000;
+    }
+    &__input-address-num { 
+        box-sizing: border-box;   
+        padding: 12px;
+        min-width: 143px;        
+        border: 1px solid rgb(242, 242, 243);
+        border-radius: 8px;
+        font-family: Nunito;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 130%;
+        background-color: #FFFFFF;
+        color: #B1B1B1;
+        @media screen and (min-width: 1024px) {
+            font-size: 12px;
+        }
+    }
+    &__input-address-num:focus {
         outline: 1px solid #000;
         color: #000;
     }
@@ -93,14 +186,28 @@
         cursor: pointer;
         padding: 11px 32px;
         width: 100%;
-        border: 1px solid #FF7020;
+        border: 1px solid #FFAB08;
         border-radius: 8px;
-        background-color: #FF7020;
         font-family: Nunito;
         font-size: 12px;
         font-weight: 400;
         line-height: 100%;
         color: #FFFFFF;
+        background-color: #FFAB08;
+        transition: all 250ms ease-in-out;
+        @media screen and (min-width: 768px) {
+            width: auto;
+            max-width: 300px;
+        }
+        @media screen and (min-width: 1024px) {
+            font-size: 16px;
+            border-radius: 12px;
+
+        }
+    }
+    &__submit-btn:hover {
+        background-color: #FF7020;
+        transition: all 250ms ease-in-out;
     }
     &__close-btn {
         position: absolute;
@@ -108,7 +215,11 @@
         right: 10px;
         width: 24px;
         height: 24px;
-        
+        @media screen and (min-width: 1024px) {
+            top: 21px;
+            right: 21px;
+    
+        }
     }
     &__close-icon {
         cursor: pointer;
@@ -126,11 +237,17 @@
     border: none;
     margin: 0;
     padding: 24px 10px;
+    @media screen and (min-width: 768px) {
+        padding: 16px 10px;
+    }
 
     &__containers {
         display: flex;
         align-items: center;
         gap: 8px;
+        @media screen and (min-width: 768px) {
+            gap: 10px;
+        }
     }&__containers:first-child {
         margin-bottom: 8px;
     }
@@ -175,6 +292,9 @@
         font-weight: 400;
         line-height: 14px;
         color: #000000;
+        @media screen and (min-width: 1024px) {
+            font-size: 12px;
+        }
     }
 }
 

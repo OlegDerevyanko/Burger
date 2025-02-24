@@ -1,0 +1,26 @@
+.categories {
+  padding: 15px 10px;
+  background: #F2F2F3; }
+  .categories__container {
+    display: flex;
+    gap: 8px;
+    overflow: hidden; }
+  .categories__menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+    gap: 8px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    height: 30px; }
+  .categories__menu:first-child {
+    background-color: #FFAB08; }
+  .categories__menu-text {
+    color: #000000;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px; }
+
+/*# sourceMappingURL=categories.css.map */
