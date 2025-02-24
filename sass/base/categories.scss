@@ -7,6 +7,9 @@
     @media screen and (min-width: 1024px) {
         padding: 20px 0 25px 32px;
     }
+    @media screen and (min-width: 1440px) {
+        padding: 20px 0 25px 75px;
+    }
 
     &__container {
         display: flex;
@@ -45,6 +48,9 @@
         font-size: 12px;
         font-weight: 400;
         line-height: 16px;
+        @media screen and (min-width: 1440px) {
+            font-size: 16px;
+        } 
     }
     
 }

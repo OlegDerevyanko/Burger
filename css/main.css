@@ -14,6 +14,9 @@ header {
   @media screen and (min-width: 1024px) {
     header {
       width: 1024px; } }
+  @media screen and (min-width: 1440px) {
+    header {
+      width: 1440px; } }
 
 main {
   width: 320px;
@@ -24,6 +27,9 @@ main {
   @media screen and (min-width: 1024px) {
     main {
       width: 1024px; } }
+  @media screen and (min-width: 1440px) {
+    main {
+      width: 1440px; } }
 
 footer {
   width: 320px;
@@ -34,6 +40,9 @@ footer {
   @media screen and (min-width: 1024px) {
     footer {
       width: 1024px; } }
+  @media screen and (min-width: 1440px) {
+    footer {
+      width: 1440px; } }
 
 p {
   margin: 0; }
@@ -106,6 +115,13 @@ button {
       background-image: url(../images/bg1024.png);
       background-position: left 0 top -112px;
       background-size: 1024px 474px; } }
+  @media screen and (min-width: 1440px) {
+    .hero {
+      gap: 21px;
+      padding: 11px 328px 20px 328px;
+      background-image: url(../images/bg1024.png);
+      background-position: left 0 top -112px;
+      background-size: 1440px 474px; } }
   @media screen and (min-width: 768px) {
     .hero__title-box {
       padding-top: 27px; } }
@@ -148,6 +164,9 @@ button {
     line-height: 16px;
     text-align: center;
     color: #FFFFFF; }
+    @media screen and (min-width: 1024px) {
+      .hero__text-span {
+        font-size: 16px; } }
   .hero__img-box {
     display: flex;
     justify-content: center;
@@ -179,6 +198,9 @@ button {
   @media screen and (min-width: 1024px) {
     .categories {
       padding: 20px 0 25px 32px; } }
+  @media screen and (min-width: 1440px) {
+    .categories {
+      padding: 20px 0 25px 75px; } }
   .categories__container {
     display: flex;
     gap: 8px;
@@ -212,6 +234,9 @@ button {
     font-size: 12px;
     font-weight: 400;
     line-height: 16px; }
+    @media screen and (min-width: 1440px) {
+      .categories__menu-text {
+        font-size: 16px; } }
 
 .categories__menu.active {
   background-color: #FFAB08; }
@@ -221,6 +246,9 @@ button {
   @media screen and (min-width: 1024px) {
     .basket {
       padding-top: 75px; } }
+  @media screen and (min-width: 1440px) {
+    .basket {
+      padding-top: 85px; } }
   .basket__btn {
     cursor: pointer;
     width: 100%;
@@ -715,6 +743,9 @@ button {
   @media screen and (min-width: 1024px) {
     .food {
       padding: 25px 32px 100px 32px; } }
+  @media screen and (min-width: 1440px) {
+    .food {
+      padding: 25px 75px 100px 75px; } }
   .food__container {
     display: flex;
     flex-direction: column; }
@@ -723,7 +754,8 @@ button {
         flex-direction: row;
         gap: 30px; } }
   .food__container-burger {
-    margin-top: 30px; }
+    margin-top: 30px;
+    transition: all 0.9s ease; }
     @media screen and (min-width: 1024px) {
       .food__container-burger {
         margin-top: 0; } }
@@ -747,6 +779,9 @@ button {
       .food__burger-list {
         margin-top: 24px;
         gap: 30px; } }
+    @media screen and (min-width: 1440px) {
+      .food__burger-list {
+        margin-top: 36px; } }
   .food__burger-item {
     padding: 4px;
     border-radius: 12px;
@@ -821,7 +856,8 @@ button {
     background-color: #FF7020;
     transition: all 250ms ease-in-out; }
   .food__container-snacks {
-    margin-top: 30px; }
+    margin-top: 30px;
+    transition: all 0.9s ease; }
     @media screen and (min-width: 1024px) {
       .food__container-snacks {
         margin-top: 0; } }
@@ -906,6 +942,7 @@ button {
     background-color: #FF7020;
     transition: all 250ms ease-in-out; }
   .food__container-hotdog {
+    transition: all 0.9s ease;
     margin-top: 30px; }
     @media screen and (min-width: 1024px) {
       .food__container-hotdog {
@@ -1250,6 +1287,9 @@ button {
   @media screen and (min-width: 1024px) {
     .footer__container {
       padding: 48px 32px 40px 32px; } }
+  @media screen and (min-width: 1440px) {
+    .footer__container {
+      padding: 48px 211px 40px 75px; } }
 @media screen and (min-width: 1024px) {
   .footer__container-box {
     display: flex;
@@ -1269,6 +1309,9 @@ button {
   .footer__contact-box {
     margin-top: 0;
     gap: 50px; } }
+@media screen and (min-width: 1440px) {
+  .footer__contact-box {
+    gap: 126px; } }
 .footer__contact {
   margin-top: 22px;
   display: flex;

@@ -17,14 +17,21 @@
         background-position: left 0 top -112px;
         background-size: 768px 378px; 
     } 
-    @media screen and (min-width: 1024px) {
-        
+    @media screen and (min-width: 1024px) {        
         gap: 1px;
         padding: 11px 130px 20px 130px;
         background-image: url(../images/bg1024.png);    
         background-position: left 0 top -112px;
         background-size: 1024px 474px; 
     } 
+    @media screen and (min-width: 1440px) {        
+        gap: 21px;
+        padding: 11px 328px 20px 328px;
+        background-image: url(../images/bg1024.png);    
+        background-position: left 0 top -112px;
+        background-size: 1440px 474px;
+
+    }
     &__title-box {
         @media screen and (min-width: 768px) {
             padding-top: 27px;
@@ -73,6 +80,9 @@
         line-height: 16px;
         text-align: center;
         color: #FFFFFF;
+        @media screen and (min-width: 1024px) {
+            font-size: 16px;
+        } 
     }
     &__img-box {
         display: flex;

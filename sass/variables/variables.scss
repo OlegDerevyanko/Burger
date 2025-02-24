@@ -13,6 +13,9 @@ header {
     @media screen and (min-width: 1024px) {
         width: 1024px;        
     }
+    @media screen and (min-width: 1440px) {
+        width: 1440px;        
+    }
 }
 main {
     width: 320px;
@@ -23,6 +26,9 @@ main {
     @media screen and (min-width: 1024px) {
         width: 1024px;        
     }
+    @media screen and (min-width: 1440px) {
+        width: 1440px;        
+    }
 }
 footer {
     width: 320px;
@@ -32,6 +38,9 @@ footer {
     }
     @media screen and (min-width: 1024px) {
         width: 1024px;        
+    }
+    @media screen and (min-width: 1440px) {
+        width: 1440px;        
     }
 }
 p {
